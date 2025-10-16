@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Saritha digwal1 Local
+=======
+Saritha digwal Github
+>>>>>>> c6bcd1e045215d2de43fcf19e063f8310e2279be
