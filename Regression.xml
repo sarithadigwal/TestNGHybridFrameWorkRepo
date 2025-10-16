@@ -7,7 +7,7 @@
   <test thread-count="5" name="Test">
     <classes>
 
-      <class name="test.Login"/>
+      <class name="test.Logout"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

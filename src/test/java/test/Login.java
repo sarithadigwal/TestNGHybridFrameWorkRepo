@@ -25,13 +25,13 @@ public class Login extends Base {
 		loginPage = homepage.navigateToLoginPage();
 		
 	}
-	@Test(priority=1)
+	@Test(priority=1,groups="login1")
 	public void verifyLoginWithValidCredentials() {
 		Assert.assertEquals(driver.getTitle(), "Account Login");
 		loginPage.loginIntoApplication(prop.getProperty("validEmail"), prop.getProperty("password"));
 		Assert.assertEquals(driver.getTitle(), "My Account");
 	}
-	@Test(priority=2)
+	@Test(priority=2,groups="login2")
 	public void verifyLoginwithInvalidCredentials() {
 		
 		loginPage.enterEmail(CommonUtils.generateBrandEmail());
@@ -39,21 +39,21 @@ public class Login extends Base {
 		loginPage.clickOnLoginButton();
 		Assert.assertEquals(loginPage.getWarningMessage(), "Warning: No match for E-Mail Address and/or Password.");
 	}
-	@Test(priority=3)
+	@Test(priority=3,groups="login1")
 	public void verifyLoginwithInvalidEmailAndValidPassword() {
 		loginPage.enterEmail(CommonUtils.generateBrandEmail());
 		loginPage.enterPassword(prop.getProperty("password"));
 		loginPage.clickOnLoginButton();
 		Assert.assertEquals(loginPage.getWarningMessage(), "Warning: No match for E-Mail Address and/or Password.");
 	}
-	@Test(priority=4)
+	@Test(priority=4,groups="login2")
 	public void verifyLoginwithValidEmailAndInvalidPassword() {
 		loginPage.enterEmail(prop.getProperty("validEmail"));
 		loginPage.enterPassword(prop.getProperty("invalidPassword"));
 		loginPage.clickOnLoginButton();
 		Assert.assertEquals(loginPage.getWarningMessage(), "Warning: No match for E-Mail Address and/or Password.");
 	}
-	@Test(priority=5)
+	@Test(priority=5,groups="login3")
 	public void verifyLoginWithoutEnteringCredentials() {
 		loginPage.clickOnLoginButton();
 		Assert.assertEquals(loginPage.getWarningMessage(), "Warning: No match for E-Mail Address and/or Password.");

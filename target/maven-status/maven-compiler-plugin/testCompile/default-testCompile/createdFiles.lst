@@ -1,0 +1,14 @@
+pages\LoginPage.class
+pages\HomePage.class
+pages\RegisterPage.class
+base\Base.class
+pages\NewsLetterPage.class
+test\Search.class
+demo\demo1.class
+pages\AccountSuccessPage.class
+test\Logout.class
+pages\LogoutPage.class
+listeners\MyListners.class
+pages\AccountPage.class
+test\Login.class
+test\Register.class
