@@ -3,8 +3,14 @@
 <suite name="Failed suite [Suite]">
   <listeners>
     <listener class-name="listeners.MyListners"/>
+    <listener class-name="listeners.RetryListner"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="test.Login">
         <methods>

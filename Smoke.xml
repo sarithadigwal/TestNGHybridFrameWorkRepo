@@ -3,8 +3,18 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="listeners.MyListners"></listener>
+		<listener class-name="listeners.RetryListner"></listener>
 	</listeners>
 	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+				<include name="Smoke">
+				</include>
+				
+			</run>
+		</groups>
+
+
 		<classes>
 			<class name="test.Login" />
 		</classes>
